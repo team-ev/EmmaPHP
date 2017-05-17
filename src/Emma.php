@@ -946,6 +946,10 @@
 		function webhooksRemoveAll() {
 			return $this->delete("/webhooks");
 		}
+
+		function mySingupForms() {
+			return $this->get("/signup_forms");
+		}
 		
 		/**
 		* Send a GET HTTP request
@@ -955,7 +959,10 @@
 		* @access public
 		*/
 		protected function get($path, $params = array()) {
+			/*
 			$this->_params = array_merge($params, $this->_params);
+			*/
+			$this->_params = array_merge($this->_params, $params);
 			$url = $this->_constructUrl($path);
 			return $this->_request($url);
 		}
@@ -969,7 +976,10 @@
 		*/
 		protected function post($path, $params = array()) {
 			$url = $this->_constructUrl($path);
+			/*
 			$this->_postData = array_merge($params, $this->_postData);
+			*/
+			$this->_postData = array_merge($this->_postData, $params);
 			return $this->_request($url, "post");
 		}
 		
@@ -982,7 +992,10 @@
 		*/
 		protected function put($path, $postData = array()) {
 			$url = $this->_constructUrl($path);
+			/*
 			$this->_postData = array_merge($postData, $this->_postData);
+			*/
+			$this->_postData = array_merge($this->_postData, $postData);
 			return $this->_request($url, "put");
 		}
 		
@@ -994,7 +1007,10 @@
 		* @access public
 		*/
 		protected function delete($path, $params = array()) {
+			/*
 			$this->_params = array_merge($params, $this->_params);
+			*/
+			$this->_params = array_merge($this->_params, $params);
 			$url = $this->_constructUrl($path);
 			return $this->_request($url, "delete");
 		}
