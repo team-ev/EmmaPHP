@@ -1,6 +1,7 @@
 <?php
-
-	class TestInterface extends PHPUnit_Framework_TestCase {
+	use TeamEV\EmmaPHP\Emma;
+	
+	class TestInterface extends PHPUnit\Framework\TestCase {
 		protected $account_id;
 		protected $public_key;
 		protected $private_key;

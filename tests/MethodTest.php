@@ -1,6 +1,7 @@
 <?php
+ 	use TeamEV\EmmaPHP\Emma;
 
-	class TestMethods extends PHPUnit_Framework_TestCase {
+	class TestMethods extends PHPUnit\Framework\TestCase {
 		protected $account_id;
 		protected $public_key;
 		protected $private_key;

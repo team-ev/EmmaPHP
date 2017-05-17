@@ -12,7 +12,8 @@ Wrapper includes methods to help with performing HTTP requests to Emma's public 
 
 ## Instantiation
 ```php
-require 'src/Emma.php';
+use TeamEV\EmmaPHP\Emma;
+
 $account_id = 123456; // Replace with your account id
 $public_key = 'ec6936852ca7a4136fdc'; // Replace with your public key
 $private_key = '63bfa55a2b5e3554db4c'; // Replace with your private key

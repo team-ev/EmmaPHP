@@ -1,4 +1,6 @@
 <?php
+	
+	namespace TeamEV\EmmaPHP;
 
 	require_once 'EmmaExceptions.php';
 	
